@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
 
 function App() {
+  const [searchQuery, setSearchQuery] = useState("");
+  function searchValue(e) {
+    setSearchQuery(e.target.value);
+  }
+  function searchNavigation() {
+    window.open(`https://www.google.com/search?q=${searchQuery}`);
+  }
+  function handleClick(e) {
+    if (e.key === "Enter") {
+      window.open(`https://www.google.com/search?q=${searchQuery}`);
+    }
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="">
+      <h1>Search Engine</h1>
+      <div className="form">
+        <input
+          value={searchQuery}
+          onChange={searchValue}
+          onKeyDown={handleClick}
+        ></input>
+        <button onClick={searchNavigation}>Search</button>
+      </div>
     </div>
   );
 }
