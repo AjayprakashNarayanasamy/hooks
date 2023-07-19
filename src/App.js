@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Quotes from "./Quotes"
 
 function App() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -14,7 +15,7 @@ function App() {
     }
   }
   return (
-    <div className="">
+    <div clasName="">
       <h1>Search Engine</h1>
       <div className="form">
         <input
