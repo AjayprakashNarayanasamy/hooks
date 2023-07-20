@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-import Quotes from "./Quotes"
+import Quotes from "./Quotes";
+import Stories from "./Stories";
 
 function App() {
   const [searchQuery, setSearchQuery] = useState("");
+
   function searchValue(e) {
     setSearchQuery(e.target.value);
   }
@@ -15,17 +17,23 @@ function App() {
     }
   }
   return (
-    <div clasName="">
-      <h1>Search Engine</h1>
-      <div className="form">
-        <input
-          value={searchQuery}
-          onChange={searchValue}
-          onKeyDown={handleClick}
-        ></input>
-        <button onClick={searchNavigation}>Search</button>
+    <>
+      <div clasName="">
+        <h1>Search Engine</h1>
+        <div className="form">
+          <input
+            value={searchQuery}
+            onChange={searchValue}
+            onKeyDown={handleClick}
+          ></input>
+          <button onClick={searchNavigation}>Search</button>
+        </div>
       </div>
-    </div>
+      <hr></hr>
+      <Quotes></Quotes>
+      <hr></hr>
+      <Stories></Stories>
+    </>
   );
 }
 
