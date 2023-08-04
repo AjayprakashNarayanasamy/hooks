@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useState, useEffect, useRef } from "react";
+import React , { useState, useEffect, useRef } from "react";
 import { fetchAxios } from "./hooks";
 
 function Stories() {
@@ -23,15 +23,15 @@ function Stories() {
   return (
     <>
       <div className="Stories">
-        {stories.map((val) => {
+        {stories.map((val , i) => {
           const { by, title, url, time } = val;
           return (
-            <>
+            <React.Fragment key={i}>
               <a href={url}>{title}</a>
               <div>
                 {by} at {new Date(time * 1000).toLocaleString()}
               </div>
-            </>
+            </React.Fragment>
           );
         })}
       </div>

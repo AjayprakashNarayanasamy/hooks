@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Economica|Roboto+Condensed');
 
 body {
-  margin: 5%;
+ 
   text-align: center;
   font-family: 'Roboto Condensed', sans-serif;
 }
@@ -25,6 +25,7 @@ input {
 
 .form > input {
   float: left;
+  height: 25px;
 }
 
 .form > button {
@@ -34,6 +35,7 @@ input {
 
 button {
   height: 25px;
+  
 }
 
 .Gallery {
@@ -91,3 +93,68 @@ button {
 .Jobs {
   text-align: left;
 }
+/* #page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 2.5rem;    
+}
+
+#footer {
+  position: absolute;
+  padding: 30px;
+  bottom: 0;
+  width: 100%;
+  min-height: 2.5rem;   
+  background-color: rgb(35, 14, 85);        
+}
+#dot{
+  margin-left: 8px;
+  margin-right: 8px;
+}
+@media (min-width: 0px) { 
+  .icon-alignment , .logo , .contents{
+    text-align: center;
+  }
+ }
+@media (min-width: 576px) { 
+  .icon-alignment  , .logo , .contents{
+    text-align: center;
+  }
+ }
+
+
+ @media (min-width: 768px) { 
+  .icon-alignment , .logo {
+    text-align: right;
+  }
+ }
+
+@media (min-width: 768px) { 
+ .contents{
+    text-align: left;
+  }
+ }
+
+
+@media (min-width: 992px) { 
+  .icon-alignment , .logo , .contents{
+    text-align: right;
+  }
+ }
+
+
+@media (min-width: 1200px) { 
+  .icon-alignment , .logo , .contents{
+    text-align: right;
+  }
+ }
+
+
+@media (min-width: 1400px) {  
+  .icon-alignment , .logo , .contents{
+    text-align: right;
+  }
+} */
