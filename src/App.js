@@ -5,6 +5,7 @@ function App() {
   const [searchQuery, setSearchQuery] = useState("");
   function searchValue(e) {
     setSearchQuery(e.target.value);
+    console.log('Testing')
   }
   function searchNavigation() {
     window.open(`https://www.google.com/search?q=${searchQuery}`);
